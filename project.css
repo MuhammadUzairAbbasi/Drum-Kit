@@ -84,5 +84,13 @@ footer {
     footer {
         font-size: 15px;
     }
+    .buttons:hover {
+    box-shadow: 5px 7px 5px rgb(12, 202, 202) ;
+    opacity: 1.5;
+    }
+    #title:hover {
+    text-shadow: 2px 10px 10px rgb(12, 202, 202);
+    opacity: 4;
+    }
     
 }
