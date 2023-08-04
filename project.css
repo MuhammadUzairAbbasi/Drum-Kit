@@ -33,10 +33,18 @@ body{
     
     
 }
-.buttons:hover {
+.press {
+    box-shadow: 0 3px 5px 0 rgb(40, 49, 49) ;
+    opacity: 0.5;
+    
+    
+}
+.buttons:hover{
     box-shadow: 5px 7px 5px rgb(12, 202, 202) ;
     opacity: 1.5;
+    
 }
+
 .w {
     background-image: url(images/tom1.png) ;
     background-position: -2px 8px;
@@ -83,14 +91,6 @@ footer {
 
     footer {
         font-size: 15px;
-    }
-    .buttons:hover {
-    box-shadow: 5px 7px 5px rgb(12, 202, 202) ;
-    opacity: 1.5;
-    }
-    #title:hover {
-    text-shadow: 2px 10px 10px rgb(12, 202, 202);
-    opacity: 4;
     }
     
 }
