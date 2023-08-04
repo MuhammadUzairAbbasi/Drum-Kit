@@ -1,43 +1,64 @@
-
 for (var i=0; i<document.querySelectorAll(".buttons").length;i++){
-    document.querySelectorAll(".buttons")[i].addEventListener("click",playAudio);
+    document.querySelectorAll(".buttons")[i].addEventListener("click",clickAudio);
 
 }
-
-function playAudio(){
+function clickAudio(){
+    makeSound(this.innerHTML);
+    buttonAnimation(this.innerHTML);
     
-    if((this.innerHTML) == "W"){
+}
+
+
+document.addEventListener("keypress",function(event){
+    makeSound(event.key)
+    buttonAnimation(event.key)
+});
+
+function makeSound(key){
+
+    if(key == "W" || key == "w"){
         var audio=new Audio("sounds/tom_1.mp3");
 
      }
-     else if(this.innerHTML =='A'){
+     else if(key == "A" || key == "a"){
          var audio=new Audio("sounds/tom_2.mp3");
         
       }
-     else if( this.innerHTML =='S'){
+     else if( key == "S" || key == "s"){
          var audio=new Audio("sounds/tom_3.mp3");
         
       }
-     else if( this.innerHTML == 'D'){
+     else if( key == "D" || key == "d"){
          var audio=new Audio("sounds/tom_4.mp3");
         
       }
-     else if( this.innerHTML == 'J'){
+     else if( key == "J" || key == "j"){
          var audio=new Audio("sounds/snare.mp3");
         
       }
-     else if( this.innerHTML == 'K'){
+     else if( key == "K" || key == "k"){
          var audio=new Audio("sounds/crash.mp3");
         
       }
-     else if( this.innerHTML == 'L'){
+     else if( key == "L" || key == "l"){
          var audio=new Audio("sounds/kick.mp3");
          
-      }
-      else {
+    }
+    else {
         alert("Select the right one ");
-      }
+    }
 
       audio.play();
+    
 }
 
+function buttonAnimation(key){
+    document.querySelector("."+ key ).classList.add("press");
+
+    // time function for animation time
+    setTimeout(function(){
+        document.querySelector("."+ key ).classList.remove("press");
+    },100);
+    
+
+}
